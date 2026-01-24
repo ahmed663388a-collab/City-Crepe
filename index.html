@@ -1,124 +1,188 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سيتي كريب</title>
-  <style>
-    /* الخطوط والألوان */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #fff8f0;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* الهيدر */
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #ff9f43, #ff6b6b);
-      color: white;
-      font-size: 50px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
+<!-- SEO -->
+<title>سيتي كريب | أفضل كريب حادق وحلو في مصر 🇪🇬</title>
+<meta name="description" content="سيتي كريب - تجربة كريب فاخرة لا مثيل لها. منيو رسمي، طلبات سريعة عبر واتساب، موقع فاخر جداً.">
+<meta name="robots" content="index, follow">
 
-    /* قسم المنيو */
-    .menu-section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    .menu-section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 50px;
-      color: #ff6b6b;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Cairo',sans-serif;
+  background: linear-gradient(180deg,#fff5ee,#ffe4d9);
+  color:#222;
+  overflow-x:hidden;
+}
 
-    /* صور المنيو */
-    .menu-img {
-      width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 0 auto 50px;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* الهيدر ثلاثي الأبعاد */
+header{
+  text-align:center;
+  padding:150px 20px;
+  background: linear-gradient(135deg,#ff7e5f,#feb47b);
+  font-family:'Poppins',sans-serif;
+  font-size:84px;
+  font-weight:900;
+  letter-spacing:6px;
+  color:white;
+  text-shadow:5px 5px 30px rgba(0,0,0,0.5);
+  border-bottom-left-radius:90px;
+  border-bottom-right-radius:90px;
+  box-shadow:0 35px 120px rgba(0,0,0,0.6);
+  perspective:1000px;
+  opacity:0;
+  transform:translateY(-120px) rotateX(15deg);
+  animation:fadeIn3D 1.7s forwards, gradientMove 20s ease infinite;
+  background-size:400% 400%;
+}
+@keyframes fadeIn3D{to{opacity:1;transform:translateY(0) rotateX(0deg);}}
+@keyframes gradientMove{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 
-    .menu-img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
-    }
+/* قسم المنيو */
+.menu-section{
+  max-width:1300px;
+  margin:120px auto;
+  padding:0 20px;
+}
+.menu-section h2{
+  font-size:56px;
+  text-align:center;
+  color:#ff5f7e;
+  margin-bottom:120px;
+  text-shadow:3px 3px 25px rgba(0,0,0,0.25);
+  font-family:'Poppins',sans-serif;
+  opacity:0;
+  transform:translateY(80px);
+  transition: all 1s ease;
+}
 
-    /* زر واتساب ثابت */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+/* صور المنيو 3D */
+.menu-img{
+  width:100%;
+  max-width:1100px;
+  display:block;
+  margin:50px auto;
+  border-radius:50px;
+  border:5px solid #fff;
+  box-shadow:0 60px 150px rgba(0,0,0,0.55);
+  transition: transform 0.8s, box-shadow 0.8s, filter 0.8s;
+  cursor:pointer;
+  opacity:0;
+  transform: scale(0.65) rotateX(15deg);
+  filter: grayscale(10%);
+}
+.menu-img:hover{
+  transform: scale(1.2) rotateX(0deg);
+  box-shadow:0 70px 180px rgba(0,0,0,0.6);
+  filter: grayscale(0%);
+}
 
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    }
+/* زر واتساب 3D */
+.whatsapp-btn{
+  position:fixed;
+  bottom:70px;
+  right:70px;
+  background: linear-gradient(45deg,#25d366,#128c7e);
+  color:white;
+  padding:30px 55px;
+  border-radius:110px;
+  font-size:30px;
+  font-weight:900;
+  font-family:'Poppins',sans-serif;
+  box-shadow:0 30px 100px rgba(0,0,0,0.8);
+  transition: transform 0.6s, box-shadow 0.6s;
+  z-index:9999;
+  text-decoration:none;
+}
+.whatsapp-btn:hover{
+  transform: scale(1.4) rotateX(10deg) rotateY(-5deg);
+  box-shadow:0 35px 120px rgba(0,0,0,0.9);
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #333;
-      color: white;
-      font-size: 18px;
-    }
+/* Lightbox */
+.lightbox{
+  display:none;
+  position:fixed;
+  z-index:10000;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.98);
+  justify-content:center;
+  align-items:center;
+}
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:40px;
+  box-shadow:0 0 120px rgba(255,255,255,0.6);
+  animation:zoomIn3D 0.5s ease;
+}
+@keyframes zoomIn3D{from{transform:scale(0.3) rotateX(15deg);opacity:0;}to{transform:scale(1) rotateX(0deg);opacity:1;}}
 
-    /* Responsive */
-    @media(max-width:600px){
-      header { font-size: 36px; padding: 40px 10px; }
-      .menu-section h2 { font-size: 28px; margin-bottom: 30px; }
-      .whatsapp-btn { font-size: 18px; padding: 12px 20px; }
-    }
-  </style>
+/* Footer */
+footer{
+  text-align:center;
+  padding:80px;
+  background:#222;
+  color:white;
+  font-family:'Poppins',sans-serif;
+  font-size:28px;
+  box-shadow:0 -30px 100px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media(max-width:1024px){header{font-size:70px;padding:120px 10px;} .menu-section h2{font-size:48px;margin-bottom:90px;} .whatsapp-btn{font-size:26px;padding:26px 50px;}}
+@media(max-width:768px){header{font-size:55px;padding:90px 10px;} .menu-section h2{font-size:40px;margin-bottom:70px;} .whatsapp-btn{font-size:24px;padding:24px 45px;}}
+@media(max-width:480px){header{font-size:40px;padding:70px 10px;} .menu-section h2{font-size:32px;margin-bottom:60px;} .whatsapp-btn{font-size:22px;padding:22px 40px;}}
+</style>
 </head>
 <body>
 
-  <!-- الهيدر -->
-  <header>
-    سيتي كريب
-  </header>
+<header>سيتي كريب | أفضل كريب حادق وحلو في مصر</header>
 
-  <!-- قسم المنيو -->
-  <section class="menu-section">
-    <h2>منيو المطعم</h2>
+<section class="menu-section">
+<h2 class="reveal">منيو سيتي كريب</h2>
+<img src="menu1.jpg" alt="كريب حادق من سيتي كريب" class="menu-img zoomable reveal">
+<img src="menu2.jpg" alt="كريب حلو من سيتي كريب" class="menu-img zoomable reveal">
+</section>
 
-    <img src="menu1.jpg" alt="منيو 1" class="menu-img">
-    <img src="menu2.jpg" alt="منيو 2" class="menu-img">
+<a href="https://wa.me/201090196638" target="_blank" class="whatsapp-btn">💬 تواصل معنا على واتساب</a>
 
-  </section>
+<div class="lightbox" id="lightbox"><img src="" alt="تكبير الصورة"></div>
 
-  <!-- زر واتساب للطلب -->
-  <a href="https://wa.me/201090196638" target="_blank" class="whatsapp-btn">
-  تواصل معنا على واتساب
-</a>
+<script>
+// Lightbox
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=lightbox.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(img=>{
+  img.addEventListener('click',()=>{lightbox.style.display='flex';lightboxImg.src=img.src;lightboxImg.alt=img.alt;});
+});
+lightbox.addEventListener('click',e=>{if(e.target!==lightboxImg) lightbox.style.display='none';});
 
-  <!-- الفوتر -->
-  <footer>
-    جميع الحقوق محفوظة © سيتي كريب
-  </footer>
+// Scroll Animations متقدمة
+const revealElements=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  const windowHeight=window.innerHeight;
+  revealElements.forEach(el=>{
+    const elementTop=el.getBoundingClientRect().top;
+    if(elementTop<windowHeight-100){
+      el.style.opacity=1;
+      el.style.transform='translateY(0) scale(1) rotateX(0deg)';
+      el.style.transition='all 1.2s ease-out';
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
+
+<footer>جميع الحقوق محفوظة © سيتي كريب</footer>
 
 </body>
 </html>
-
